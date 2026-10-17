@@ -1,0 +1,31 @@
+services:
+  backend:
+    build:
+      context: ../backend/backend
+      dockerfile: Dockerfile
+    image: backend:2.0
+    volumes:
+      - backend-data:/app/data
+    networks:
+      - devops-net
+    restart: always
+
+  frontend:
+    build:
+      context: ../frontend/frontend
+      dockerfile: Dockerfile
+    image: frontend:2.0
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - devops-net
+    restart: always
+
+networks:
+  devops-net:
+    driver: bridge
+
+volumes:
+  backend-data:
