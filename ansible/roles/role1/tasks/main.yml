@@ -46,7 +46,5 @@
     chdir: "{{ app_dir }}/DevOps"
   tags: [start]
 
-# Остановка (тег "stop") вынесена в отдельный файл subtask.yml —
-# именно так, как вы и начали называть файлы.
 - name: Импортировать задачи остановки
   ansible.builtin.import_tasks: subtask.yml

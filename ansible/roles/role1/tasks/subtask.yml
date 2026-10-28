@@ -1,9 +1,4 @@
 ---
-# Тег "stop": остановка микросервисов.
-# Тег "never" означает: эта задача НЕ выполняется при обычном запуске
-# (ansible-playbook firstPlaybook.yml), а только когда явно указан
-# --tags stop. Поэтому "старт" и "стоп" не конфликтуют между собой.
-
 - name: Остановить микросервисы (docker compose down)
   ansible.builtin.command:
     cmd: docker compose down

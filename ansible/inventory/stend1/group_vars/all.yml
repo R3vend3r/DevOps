@@ -2,7 +2,7 @@
 github_user: R3vend3r
 
 app_dir: /opt/app
-app_version: v2.0   # версия frontend и backend, которую раскатываем
+app_version: v2.0
 
 backend_repo:  "https://github.com/{{ github_user }}/backend.git"
 frontend_repo: "https://github.com/{{ github_user }}/frontend.git"
