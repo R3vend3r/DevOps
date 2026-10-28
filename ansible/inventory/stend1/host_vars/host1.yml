@@ -1,0 +1,8 @@
+---
+# Параметры подключения именно к этому хосту (см. схему: host_vars/host1).
+# host1 = WSL Ubuntu на этом же компьютере, "удалённая" нода по SSH на 127.0.0.1.
+ansible_host: 127.0.0.1
+ansible_port: 2222
+ansible_user: root
+ansible_ssh_private_key_file: ~/.ssh/id_ed25519
+ansible_python_interpreter: /usr/bin/python3
