@@ -1,7 +1,7 @@
 services:
   backend:
     build:
-      context: ../backend/backend
+      context: ../backend
       dockerfile: Dockerfile
     image: backend:2.0
     volumes:
@@ -12,7 +12,7 @@ services:
 
   frontend:
     build:
-      context: ../frontend/frontend
+      context: ../frontend
       dockerfile: Dockerfile
     image: frontend:2.0
     ports:
